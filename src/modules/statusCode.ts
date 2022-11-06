@@ -1,0 +1,5 @@
+export default {
+    BAD_REQUEST: 405,
+    CREATED:201,
+    INTERNAL_SERVER_ERROR:500
+}

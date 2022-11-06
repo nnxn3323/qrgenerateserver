@@ -1,0 +1,5 @@
+export default {
+    CREATE_FILE_SUCCESS: "File Create Success",
+    NULL_VALUE:"NULL",
+    INTERNAL_SERVER_ERROR:"INTERNAL SERVER ERROR"
+}
