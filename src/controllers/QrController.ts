@@ -13,7 +13,7 @@ export interface AccessTokenPayload {
   userId: string;
   orderId: string;
 }
-const JWT_SECRET = process.env.JWT_SECRET ?? "DevSecretKey";
+const JWT_SECRET = process.env.JWT_SECRET ?? "rtnio345y8sdfjv142sdf123";
 export function generateToken(payload: TokenPayload) {
   return new Promise<string>((resolve, reject) => {
     jwt.sign(
@@ -34,7 +34,7 @@ export function generateToken(payload: TokenPayload) {
 }
 // @ts-ignore
 export const generateQr = async (req: Request, res: Response) => {
-  const { userId, orderId } = req.body;
+  const { userId, orderId } = req.body.data;
   try {
     const token = await generateToken({ userId, orderId });
     const qrCode = await QrCode.toBuffer(token);
